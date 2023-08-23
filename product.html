@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product card</title>
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+
+</head>
+
+<body>
+    <div class="containermain">
+        <header>
+            <div class="page-header">
+                <div class="logo">
+                    <p><span>T</span>op<span>S</span>hop</p>
+                </div>
+                <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+                <div id="navigation-bar" class="nav-bar">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="product.html">Product</a>
+                    <button class="login" id="form-open">Login</button>
+                </div>
+            </div>
+            <!-- login button start-->
+
+            <section class="home">
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+
+                    <!-- Login From -->
+                    <div class="form login_form">
+                        <form action="res/databaseconnection/logincode.php" method="POST">
+                            <h2>Login</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Enter your password" name="password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <div class="option_field">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check" />
+                                    <label for="check">Remember me</label>
+                                </span>
+                                <a href="#" class="forgot_pw">Forgot password?</a>
+                            </div>
+
+                            <button class="button" name="login">Login Now</button>
+
+                            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                        </form>
+                    </div>
+
+                    <!-- Signup From -->
+                    <div class="form signup_form">
+                        <form action="/res/databaseconnection/logincode.php" method="POST">
+                            <h2>Signup</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="signup_email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Create password" name="signup_password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Confirm password" name="confirm_password"
+                                    required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <button class="button" name="signup">Signup Now</button>
+
+                            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                        </form>
+                    </div>
+
+            </section>
+            <!-- login  button end -->
+
+
+
+            <!--cart start-->
+            <div id="cart-info" class="nav-info cart-info">
+                <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+                <p><span id="item-count">0 </span> items
+                </p>
+            </div>
+
+            <section class="cart" id="cart">
+                <h1 class="section-header">CART</h1>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+        </header>
+        <!-- cart end -->
+
+        <!-- product contain start -->
+
+        <div class="product-container">
+            <P class="title">OUR PRODUCTS</P>
+
+            <div class="products">
+
+                <div class="product Roses">
+                    <img src="/res/productimag/LED Bulb.jpg" class="product__image">
+                    <h5 class="product-title">LED Bulb</h5>
+                    Eveready Base B22D 7-Watt LED
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$10</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="product Tulips">
+                    <img src="/res/productimag/LED LG.jpg" class="product__image">
+                    <h5 class="product-title">LED LG</h5>
+                    LED Smart Android TV (32 inches)
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$15</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Table Fan.jpg" class="product__image">
+                    <h5 class="product-title">Table Fan</h5>
+                    USHA Maxx Air Ultra 400MM Table Fan
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$100</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Sony DSLR  Camera.jpg" class="product__image">
+                    <h5 class="product-title">Sony Camera</h5>
+                    Digital DSLR Camera (black)
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$50</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/jawellary1.jpg" class="product__image">
+                    <h5 class="product-title">Gold Plated Ring </h5>
+                    Set of 22 Gold Plated Ring for Women
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$30</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/jawellary3.jpg" class="product__image">
+                    <h5 class="product-title">Trendying Nacklace</h5>
+                    Trendy Alphabet B Necklace
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$33</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Diamond Ring.jpeg" class="product__image">
+                    <h5 class="product-title">Diamond Ring</h5>
+                    Real Dianmond Ring
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$78</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Necklace Gold.jpg" class="product__image">
+                    <h5 class="product-title">Necklace Gold</h5>
+                    Atasi international Gold Necklace Gold
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$68</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Knife.jpg" class="product__image">
+                    <h5 class="product-title">Knife</h5>
+                    Steel Knife Set With High-carbon Blades
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$4</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Spoon.jpg" class="product__image">
+                    <h5 class="product-title">Spoon.</h5>
+                    Paragl Stainless Stlee Spoon length 16.5cm
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$2</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Utensil Set.jpg" class="product__image">
+                    <h5 class="product-title">Utensil Set</h5>
+                    Plastice 2 Tier Kitchen Space Storage
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$40</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/mixture.jpg" class="product__image">
+                    <h5 class="product-title">Mixer</h5>
+                    Moter Mixer Grinder with 3 jars
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$35</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Apple Laptop.jpg" class="product__image">
+                    <h5 class="product-title">Apple Laptop</h5>
+                    Apple MacBook Air Laptop MI chip 13.3-inch/33.74cm
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$323.5</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Dell Laptop1.jpg" class="product__image">
+                    <h5 class="product-title">Dell X12</h5>
+                    Dell Vastro 3420 Laptop 12th Gen
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$555</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Dell 2.jpg" class="product__image">
+                    <h5 class="product-title">Dell X34</h5>
+                    Dell Vastro 3425 Laptop AMD Ryzen 5
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$405</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Hp Laptop.jpg" class="product__image">
+                    <h5 class="product-title">HP 2.0</h5>
+                    HP 247 Laptop P-3045B HD/14 inches
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$1800</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Shoes.jpg" class="product__image">
+                    <h5 class="product-title">Shoes Sport</h5>
+                    Red Sparts Shoes for Men Shoes perfect Walking
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$70</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Shoes1.jpg" class="product__image">
+                    <h5 class="product-title">Shoes nexo</h5>
+                    Smart casual comfortable shoes
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$53</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Shoes2.jpg" class="product__image">
+                    <h5 class="product-title">Shoes Ads</h5>
+                    Synactive Mens Prism Running Shoe
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$15</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Hill.jpg" class="product__image">
+                    <h5 class="product-title">Heel Sandals</h5>
+                    JM LOOKS Casual Heel Sandals
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$25</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Mens Blazers.webp" class="product__image">
+                    <h5 class="product-title">Mens Blazers</h5>
+                    Men's formal Blazer for Multipurpose
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$130</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Sari.jpg" class="product__image">
+                    <h5 class="product-title">Saree</h5>
+                    SWORNO Women Silk Saree
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$100</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Suit & Salwar.jpg" class="product__image">
+                    <h5 class="product-title">Suit & Salwar.</h5>
+                    Red Cotton Printed Salwar Suit
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$80</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/T-shirt.jpg" class="product__image">
+                    <h5 class="product-title">T-shirt</h5>
+                    BOMBAE T-shirt Men's Catton
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$73</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/T1.jpg" class="product__image">
+                    <h5 class="product-title">Toys Doll</h5>
+                    Marada 35 cm Bummy Solt Toy-Peach
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$33</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/T2.jpg" class="product__image">
+                    <h5 class="product-title">Toys xds</h5>
+                    Meada Super Salt Hoodie Penguin Salt
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$53</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Toy1.jpg" class="product__image">
+                    <h5 class="product-title">Toys Tata</h5>
+                    Moster Truck Toys For kids
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$63</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Toy3.jpg" class="product__image">
+                    <h5 class="product-title">Baby Doll</h5>
+                    Baby Alive Change Play Baby Doll
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$73</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Alarm Clock.jpg" class="product__image">
+                    <h5 class="product-title">Alarm Clock</h5>
+                    Sarth Enterprise Twin Bell Copper Table Alarm clock
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$87</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Fossil Watch.jpg" class="product__image">
+                    <h5 class="product-title">Fossil Watch</h5>
+                    Fastrack Bold Analog Black Dial Men's Watch
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$84</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Phone watch.jpg" class="product__image">
+                    <h5 class="product-title">Smart Watch</h5>
+                    beatXP Maarv Neo Display,Bluetooth Calling Smart Watch.
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$354</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/I-phone.jpg" class="product__image">
+                    <h5 class="product-title">I-Phone 10</h5>
+                    Apple iphone 10 SE(64 GB)
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$34</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/I-phone1.jpg" class="product__image">
+                    <h5 class="product-title">I-Phone 14</h5>
+                    Apple iphone 14 (128) ram 8GB
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$87</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/samsung.jpg" class="product__image">
+                    <h5 class="product-title">Samsung 15</h5>
+                    Samsung Galary S23 Ultra 5G (Black,12GB)
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$90</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/vivo.jpg" class="product__image">
+                    <h5 class="product-title">Vivo Y22</h5>
+                    Vivo Y22 (Metaverse 4GB RAM, 128GB Storage)
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$89</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product Orchids">
+                    <img src="/res/productimag/Batminton.jpg" class="product__image">
+                    <h5 class="product-title">Table Tennis</h5>
+                    BODY MAXX Table Tennis Set
+
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$100</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Btminton.jpg" class="product__image">
+                    <h5 class="product-title">Batminton</h5>
+                    Nylon Shuttlecock with Full Badminton Cover Kit
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$65</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Coack.jpg" class="product__image">
+                    <h5 class="product-title">Cock</h5>
+                    Durable Cork and White
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$98</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Footbal.jpg" class="product__image">
+                    <h5 class="product-title">Footbal</h5>
+                    Nivia Storm Football | Rubberized Moulded |
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$150</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product Orchids">
+                    <img src="/res/productimag/Footbal1.jpg" class="product__image">
+                    <h5 class="product-title">Footbal1</h5>
+                    Nivia Storm Football | Rubberized Moulded |
+                    <div class="shop-item-details">
+                        <h3 class="product__price">$60</h3>
+                        <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product contain end -->
+
+        <!-- footer contain start -->
+        <footer>
+            <div class="content">
+                <div class="left box">
+
+                    <div class="upper">
+                        <a href="https://www.otipy.com/category/fruits-2" target=_blank;>
+                            <img id="imgage147" src="/res/image/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                            <a href="#"><i class="fas fa-phone-volume"></i>+91-6206067070</a>
+                        </div>
+                        <div class="email">
+                            <a href="#"><i class="fas fa-envelope"></i>essosglobalsoftech@gmail.com</a>
+                        </div>
+                        <div class="Address">
+                            <a href="#"><i class="fa fa-map-marker"></i>
+                                2110, Street No 3,2nd floor, New Netaji Nagar Bahadurgarh, Haryana 124507.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Location start here -->
+                <div class="middle box">
+                    <div class="topic" id="map">Company Location</div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13997.907778824767!2d76.9453208!3d28.7052892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d096f36985d9d%3A0x851f64afc47343b1!2sESSOS%20GLOBAL%20SOFTECH%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1688020714951!5m2!1sen!2sin"
+                        width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <!-- Company Location End here -->
+
+
+                <div class="right box">
+                    <div class="topic">Follow Us</div>
+                    <form action="#">
+                        <input type="text" placeholder="Enter email address">
+                        <input type="submit" name="" value="Send">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://in.linkedin.com/company/essos-global-softech-pvt-ltd">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="f-credits">
+                <p>
+                    copyright @2023 All rights reserved |💛Dharmendra Prasad
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- footer contain end -->
+    <script>
+        filterSelection('all')
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("product");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arrl, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("filterButtons");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/productcart.js"></script>
+    <script src="/javascript/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us page</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+    <div class="containermain">
+        <header>
+            <div class="page-header">
+                <div class="logo">
+                    <p><span>T</span>op<span>S</span>hop</p>
+                </div>
+                <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+                <div id="navigation-bar" class="nav-bar">
+                    <a href="/index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="product.html">Product</a>
+                    <button class="login" id="form-open">Login</button>
+                </div>
+            </div>
+
+
+            <!-- login form start-->
+            <section class="home">
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+
+                    <!-- Login From -->
+                    <div class="form login_form">
+                        <form action="res/databaseconnection/logincode.php" method="POST">
+                            <h2>Login</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Enter your password" name="password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <div class="option_field">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check" />
+                                    <label for="check">Remember me</label>
+                                </span>
+                                <a href="#" class="forgot_pw">Forgot password?</a>
+                            </div>
+
+                            <button class="button" name="login">Login Now</button>
+
+                            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                        </form>
+                    </div>
+
+                    <!-- Signup From -->
+                    <div class="form signup_form">
+                        <form action="/res/databaseconnection/logincode.php" method="POST">
+                            <h2>Signup</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="signup_email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Create password" name="signup_password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Confirm password" name="confirm_password"
+                                    required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <button class="button" name="signup">Signup Now</button>
+
+                            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                        </form>
+                    </div>
+
+            </section>
+            <!-- login form end -->
+
+            <!-- card start-->
+            <div id="cart-info" class="nav-info cart-info">
+                <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+                <p><span id="item-count">0 </span> items
+                </p>
+            </div>
+            <section class="cart" id="cart">
+                <h1 class="section-header">CART</h1>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+            <!-- card end -->
+        </header>
+
+
+        <!-- contact us -->
+        <div class="container">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                        <a href="https://www.google.co.in/maps/place/Hanuman+PG+House/@28.7085066,76.9320501,17z/data=!3m1!4b1!4m6!3m5!1s0x390d09f2bcfc2be1:0xce5b4b9d93cbe912!8m2!3d28.7085066!4d76.934625!16s%2Fg%2F11fn0l4dhc?entry=ttu"
+                            target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="topic">Address</div>
+                            <div class="text-one"> 22, foota road, near petrol pump, Line Par, Netaji Nagar,
+                                Bahadurgarh,
+                                Haryana 124507</div>
+                            <div class="text-two">Birendranagar 06</div>
+                        </a>
+                    </div>
+                    <div class="phone details">
+                        <a href="" target="_blank"><i class="fas fa-phone-alt"></i>
+                            <div class="topic">Phone</div>
+                            <div class="text-one">+91 7630343343</div>
+                            <div class="text-two">+91 9407880983</div>
+                    </div>
+                    <div class="email details">
+                        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                            <i class="fas fa-envelope"></i>
+
+                            <div class="topic">Email</div>
+                            <div class="text-one">dmendraprasad@gmail.com</div>
+                            <div class="text-two">info.topshop@gamil.com</div>
+                        </a>
+                    </div>
+
+                    <div class="WhatsApp details">
+                        <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            <div class="topic">WhatsApp</div>
+                            <div class="text-one">+91 7630343343</div>
+                            <div class="text-two">+91 9407880983</div>
+                    </div>
+                    </a>
+                </div>
+
+
+
+                <div class="right-side">
+                    <div class="map">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13997.907778824767!2d76.9453208!3d28.7052892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d096f36985d9d%3A0x851f64afc47343b1!2sESSOS%20GLOBAL%20SOFTECH%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1688020714951!5m2!1sen!2sin"
+                            style="border:0;  " class="maplocation" allowfullscreen="" loading="lazy" -->
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+                    <div class="sending-message">
+                        <div class="topic-text">Send us a message</div>
+                        <p>If you have any work from me or any types of quries related to my tutorial, you can send me
+                            message
+                            from here. It's my pleasure to help you.</p>
+                        <form action="#">
+                            <div class="input-box">
+                                <input type="text" placeholder="Enter your name">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="button">
+                                <input type="button" value="Send Now">
+                            </div>
+                            <div class="social ">
+                                <h1>Social link</h1>
+                                <a href="https://in.search.yahoo.com/search?fr=mcafee&type=E210IN1289G0&p=google"
+                                    class="fa fa-google" id="google" target="_blank"></a>
+                                <a href="https://www.linkedin.com/feed/" class="fa fa-linkedin" id="linkedin"
+                                    target="_blank"></a>
+                                <a href="https://twitter.com/home" class="fa fa-twitter" id="twitter"
+                                    target="_blank"></a>
+                                <a href="https://www.instagram.com/?next=%2F" class="fa fa-instagram" id="instagram"
+                                    target="_blank"></a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER START -->
+        <footer>
+            <div class="content">
+                <div class="left box">
+
+                    <div class="upper">
+                        <a href="https://www.otipy.com/category/fruits-2" target=_blank;>
+                            <img id="imgage147" src="/res/image/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                            <a href="#"><i class="fas fa-phone-volume"></i>+91-6206067070</a>
+                        </div>
+                        <div class="email">
+                            <a href="#"><i class="fas fa-envelope"></i>essosglobalsoftech@gmail.com</a>
+                        </div>
+                        <div class="Address">
+                            <a href="#"><i class="fa fa-map-marker"></i>
+                                2110, Street No 3,2nd floor, New Netaji Nagar Bahadurgarh, Haryana 124507.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Location start here -->
+                <div class="middle box">
+                    <div class="topic" id="map">Company Location</div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13997.907778824767!2d76.9453208!3d28.7052892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d096f36985d9d%3A0x851f64afc47343b1!2sESSOS%20GLOBAL%20SOFTECH%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1688020714951!5m2!1sen!2sin"
+                        width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <!-- Company Location End here -->
+                <div class="right box">
+                    <div class="topic">Follow Us</div>
+                    <form action="#">
+                        <input type="text" placeholder="Enter email address">
+                        <input type="submit" name="" value="Send">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://in.linkedin.com/company/essos-global-softech-pvt-ltd">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="f-credits">
+                <p>
+                    copyright @2023 All rights reserved |💛Dharmendra Prasad
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/login.js"></script>
+    <script src="/javascript/productcart.js"></script>
+</body>
+
+</html>

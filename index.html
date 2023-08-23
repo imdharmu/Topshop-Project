@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index main</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+    <div class="containermain">
+        <header>
+            <div class="page-header">
+                <div class="logo">
+                    <p><span>T</span>op<span>S</span>hop</p>
+                </div>
+                <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+                <div id="navigation-bar" class="nav-bar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="product.html">Product</a>
+                    <button class="login" id="form-open">Login</button>
+                </div>
+            </div>
+
+            <!--  login form start-->
+            <section class="home">
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+
+                    <!-- Login From -->
+                    <div class="form login_form">
+                        <form action="res/databaseconnection/logincode.php" method="POST">
+                            <h2>Login</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Enter your password" name="password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <div class="option_field">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check" />
+                                    <label for="check">Remember me</label>
+                                </span>
+                                <a href="#" class="forgot_pw">Forgot password?</a>
+                            </div>
+
+                            <button class="button" name="login">Login Now</button>
+
+                            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                        </form>
+                    </div>
+
+                    <!-- Signup From -->
+                    <div class="form signup_form">
+                        <form action="/res/databaseconnection/logincode.php" method="POST">
+                            <h2>Signup</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="signup_email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Create password" name="signup_password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Confirm password" name="confirm_password"
+                                    required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <button class="button" name="signup">Signup Now</button>
+
+                            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                        </form>
+                    </div>
+
+            </section>
+            <!-- login form end -->
+
+
+            <!-- cart start -->
+            <!--CART-->
+            <div id="cart-info" class="nav-info cart-info">
+                <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+                <p><span id="item-count">0 </span> items
+                </p>
+            </div>
+
+            <section class="cart" id="cart">
+                <h1 class="section-header">CART</h1>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+
+        </header>
+
+        <!-- slider containier -->
+        <div class="slider-container">
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <img src="/res/image/electronic4.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/jewellery2.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/kitchen5.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/laptop4.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/phone6.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/Shoes4.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/Sport2.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/T-shirt-3.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/Toys & games-4.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="/res/image/watch-1.jpg" alt="">
+            </div>
+            </div>
+            <div style="text-align:center"class="dotcontainer">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+            
+         </div>
+         <!-- slider end -->
+
+
+    <!-- Start Categories -->
+    <div class="categoriesall">
+        <h1>Categories</h1>
+
+        <div class="categories">
+
+            <div class="card" id="card1">
+                <a href="product.html" target="_blank">
+                    <img id="imagcategorie" src="/res/image/Electronic.jpg" alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Electronic</b></h4>
+                    <!-- <p>Interior Designer</p> -->
+                </div>
+            </div>
+
+            <div class="card" id="card1">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/Jewelry-3.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Jewelry</b></h4>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/kitchen-1.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Kitchen</b></h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/laptop-5.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Laptop</b></h4>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="image"> -->
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/shoes-7.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Shoes</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/T-shirt-3.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>T-Shirt</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/Toys & games-4.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Toys & games</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/watch-1.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Watch</b></h4>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/phone-1.jpg"
+                        alt="Avatar">
+                </a>
+
+                <div class="text">
+                    <h4><b>Phone</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/image/sport-1.jpg"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Sport</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/productimag/Sari.jpg"
+                        alt="Avatar">
+                </a>
+
+                <div class="text">
+                    <h4><b>Saree</b></h4>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="product.html" target="_blank"> <img id="imagcategorie" src="/res/productimag/Mens Blazers.webp"
+                        alt="Avatar">
+                </a>
+                <div class="text">
+                    <h4><b>Mens Blazers</b></h4>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- End Categories -->
+
+        <!-- latest and Most valuable  Product start-->
+        <div class="latest-most-container">
+            <div class="latest-most">
+                <a href="#" target="_blank">
+                    <div class="latest">
+
+                        <div class="latestitem">
+
+                            <h2>Latest Product</h2>
+
+                        </div>
+
+                        <div class="latestimag">
+
+                        </div>
+
+                </a>
+            </div>
+
+            <div class="most-valuable">
+                <a href="#" target="_blank">
+                    <div class="mostiteam">
+                        <H2>Most Valuable</H2>
+
+                    </div>
+                    <div class="mostimage">
+
+                    </div>
+            </div>
+            </a>
+        </div>
+        <!-- latest and most valuable end -->
+    </div>
+
+
+    <!-- FOOTER START -->
+    <footer>
+        <div class="content">
+            <div class="left box">
+
+                <div class="upper">
+                    <a href="https://www.otipy.com/category/fruits-2" target=_blank;>
+                        <img id="imgage147" src="/res/image/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>+91-6206067070</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>essosglobalsoftech@gmail.com</a>
+                    </div>
+                    <div class="Address">
+                        <a href="#"><i class="fa fa-map-marker"></i>
+                            2110, Street No 3,2nd floor, New Netaji Nagar Bahadurgarh, Haryana 124507.
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Location start here -->
+            <div class="middle box">
+                <div class="topic" id="map">Company Location</div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13997.907778824767!2d76.9453208!3d28.7052892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d096f36985d9d%3A0x851f64afc47343b1!2sESSOS%20GLOBAL%20SOFTECH%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1688020714951!5m2!1sen!2sin"
+                    width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <!-- Company Location End here -->
+
+            <!-- This is Follow us Content start here -->
+            <div class="right box">
+                <div class="topic">Follow Us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Send">
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://in.linkedin.com/company/essos-global-softech-pvt-ltd">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="f-credits">
+            <p>
+                copyright @2023 All rights reserved |💛Dharmendra Prasad
+            </p>
+        </div>
+
+    </footer>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/login.js"></script>
+    <script src="/javascript/productcart.js"></script>
+
+</body>
+
+</html>

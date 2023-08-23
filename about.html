@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+    <div class="containermain">
+        <header>
+            <div class="page-header">
+                <div class="logo">
+                    <p><span>T</span>op<span>S</span>hop</p>
+                </div>
+                <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+                <div id="navigation-bar" class="nav-bar">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="product.html">Product</a>
+                    <button class="login" id="form-open">Login</button>
+                </div>
+            </div>
+
+            <!-- login button start-->
+
+            <section class="home">
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+
+                    <!-- Login From -->
+                    <div class="form login_form">
+                        <form action="res/databaseconnection/logincode.php" method="POST">
+                            <h2>Login</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Enter your password" name="password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <div class="option_field">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check" />
+                                    <label for="check">Remember me</label>
+                                </span>
+                                <a href="#" class="forgot_pw">Forgot password?</a>
+                            </div>
+
+                            <button class="button" name="login">Login Now</button>
+
+                            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                        </form>
+                    </div>
+
+                    <!-- Signup From -->
+                    <div class="form signup_form">
+                        <form action="/res/databaseconnection/logincode.php" method="POST">
+                            <h2>Signup</h2>
+
+                            <div class="input_box">
+                                <input type="email" placeholder="Enter your email" name="signup_email" required />
+                                <i class="uil uil-envelope-alt email"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Create password" name="signup_password" required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Confirm password" name="confirm_password"
+                                    required />
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <button class="button" name="signup">Signup Now</button>
+
+                            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                        </form>
+                    </div>
+
+            </section>
+            <!-- login button end -->
+
+
+            <!-- cart start -->
+            <div id="cart-info" class="nav-info cart-info">
+                <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+                <p><span id="item-count">0 </span> items
+                </p>
+            </div>
+            <section class="cart" id="cart">
+                <h1 class="section-header">CART</h1>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+            <!-- cart end -->
+
+        </header>
+        <!-- about contain start-->
+        <section class="about-us">
+            <div class="about">
+                <div class="aboutimag">
+                    <img src="/res/aboutimage/aboutmain-removebg-preview.png" class="pic">
+
+                </div>
+                <div class="text">
+                    <h2>About Us</h2>
+                    <hr>
+                    <p>TopShop is your one-stop destination for all your online shopping needs. We are a leading
+                        ecommerce
+                        platform
+                        that offers a wide range of products from fashion, beauty, electronics, home, and more. Whether
+                        you
+                        are
+                        looking
+                        for the latest trends, the best deals, or the most convenient delivery options, we have it all
+                        at
+                        TopShop.
+
+                        At TopShop, we are committed to providing you with the best online shopping experience possible.
+                        We
+                        have a
+                        user-friendly website, a secure payment system, and a fast and reliable delivery service. We
+                        also
+                        have a
+                        dedicated customer support team that is ready to assist you with any questions or issues you may
+                        have.
+
+                        Our mission is to make online shopping easy, fun, and affordable for everyone. We want to help
+                        you
+                        discover
+                        new
+                        products, find what you love, and enjoy the convenience of online shopping. We also want to
+                        support
+                        local
+                        businesses and entrepreneurs by providing them with a platform to showcase and sell their
+                        products.
+
+                        TopShop is more than just an ecommerce website. We are a community of shoppers, sellers, and
+                        lovers
+                        of
+                        online
+                        shopping. We invite you to join us and explore the amazing world of ecommerce at TopShop.</p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <h2 style="text-align:center">Our Team</h2>
+                <div class="column">
+                    <div class="card">
+
+                        <img src="/res/aboutimage/aboutimage.jpg" alt="Jane" style="width:100%">
+
+                        <div class="container">
+                            <h2>Jane Doe</h2>
+                            <p class="title">CEO & Founder</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>jane@example.com</p>
+                            <p><button class="Contact">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="/res/aboutimage/ourteam2.jpg" alt="Mike" style="width:100%">
+                        <div class="container">
+                            <h2>Mike Ross</h2>
+                            <p class="title">Art Director</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>mike@example.com</p>
+                            <p><button class="Contact">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="/res/aboutimage/ourteam3.jpg" alt="John" style="width:100%">
+                        <div class="container">
+                            <h2>John Doe</h2>
+                            <p class="title">Designer</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>john@example.com</p>
+                            <p><button class="Contact">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- about contain end -->
+
+        <!-- FOOTER START -->
+        <footer>
+            <div class="content">
+                <div class="left box">
+
+                    <div class="upper">
+                        <a href="https://www.otipy.com/category/fruits-2" target=_blank;>
+                            <img id="imgage147" src="/res/image/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                            <a href="#"><i class="fas fa-phone-volume"></i>+91-6206067070</a>
+                        </div>
+                        <div class="email">
+                            <a href="#"><i class="fas fa-envelope"></i>essosglobalsoftech@gmail.com</a>
+                        </div>
+                        <div class="Address">
+                            <a href="#"><i class="fa fa-map-marker"></i>
+                                2110, Street No 3,2nd floor, New Netaji Nagar Bahadurgarh, Haryana 124507.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Location start here -->
+                <div class="middle box">
+                    <div class="topic" id="map">Company Location</div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13997.907778824767!2d76.9453208!3d28.7052892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d096f36985d9d%3A0x851f64afc47343b1!2sESSOS%20GLOBAL%20SOFTECH%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1688020714951!5m2!1sen!2sin"
+                        width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <!-- Company Location End here -->
+
+                <!-- This is Follow us Content start here -->
+                <div class="right box">
+                    <div class="topic">Follow Us</div>
+                    <form action="#">
+                        <input type="text" placeholder="Enter email address">
+                        <input type="submit" name="" value="Send">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://in.linkedin.com/company/essos-global-softech-pvt-ltd">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="f-credits">
+                <p>
+                    copyright @2023 All rights reserved |💛Dharmendra Prasad
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- footer end  -->
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/login.js"></script>
+    <script src="/javascript/productcart.js"></script>
+</body>
+
+</html>
